@@ -10,10 +10,10 @@
     <p>정보를 수정하세요</p>
     <form action="" method="">
         <label for="name">이름:</label><br>
-        <input type="text" name="name" value="Yohan Yoon"><br><br>
+        <input type="text" id="name" name="name" value="Yohan Yoon"><br><br>
 
-        <label for="studentID">이메일:</label><br>
-        <input type="text" name="studentID" value="22000481"><br><br>
+        <label for="studentID">학번:</label><br>
+        <input type="text" id="studentID" name="studentID" value="22000481"><br><br>
 
         <label for="gender">성별</label><br>
         <input type="radio" name="gender" value="M" checked> 남
@@ -21,15 +21,37 @@
         <br><br>
 
         <label for="email">이메일:</label><br>
-        <input type="text" name="email" value="asdfasdf@gmail.com"><br><br>
+        <input type="text" id="email" name="email" value="asdfasdf@gmail.com"><br><br>
 
-        <button onclick="showAlert()">저장</button>
+        <button type="submit" onclick="showAlert()">저장</button>
         <input type="reset" value="쥐소"><br>
     </form>
 
     <script>
         function showAlert() {
-            alert('저장 되었습니다.');
+            var check = validateForm();
+            if(check == true) alert('게시물이 추가됩니다.');
+            else alert('모든 정보를 입력하셔야 합니다.');
+        }
+
+        function validateForm() {
+        var name = document.getElementById('name').value;
+        var studentID = document.getElementById('studentID').value;
+        var email = document.getElementById('email').value;
+        var gender = document.getElementsByName('gender');
+        var genderSelected = false;
+
+        for (var i = 0; i < gender.length; i++) {
+            if (gender[i].checked) {
+            genderSelected = true;
+            break;
+            }
+        }
+
+        if (name === '' || email === '' || studentID === '' || !genderSelected) {
+            return false;
+        }
+        return true;
         }
         </script>
 
