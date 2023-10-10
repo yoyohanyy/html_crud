@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./my.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,24 +9,28 @@
 <body>
     <h1>Form</h1>
     <p>정보를 수정하세요</p>
-    <form action="" method="">
-        <label for="name">이름:</label><br>
-        <input type="text" id="name" name="name" value="Yohan Yoon"><br><br>
 
-        <label for="studentID">학번:</label><br>
-        <input type="text" id="studentID" name="studentID" value="22000481"><br><br>
+    <div class="col-3 col-s-3">
+        <form action="" method="">
+            <label for="name">이름:</label><br>
+            <input type="text" id="name" name="name" value="Yohan Yoon"><br><br>
 
-        <label for="gender">성별</label><br>
-        <input type="radio" name="gender" value="M" checked> 남
-        <input type="radio" name="gender" value="W"> 여
-        <br><br>
+            <label for="studentID">학번:</label><br>
+            <input type="text" id="studentID" name="studentID" value="22000481"><br><br>
 
-        <label for="email">이메일:</label><br>
-        <input type="text" id="email" name="email" value="asdfasdf@gmail.com"><br><br>
+            <label for="gender">성별</label><br>
+            <input type="radio" name="gender" value="M" checked> 남
+            <input type="radio" name="gender" value="W"> 여
+            <br><br>
 
-        <button type="submit" onclick="showAlert()">저장</button>
-        <input type="reset" value="쥐소"><br>
-    </form>
+            <label for="email">이메일:</label><br>
+            <input type="text" id="email" name="email" value="asdfasdf@gmail.com"><br><br>
+
+            <button type="submit" onclick="showAlert()">저장</button>
+            <input type="reset" value="쥐소"><br>
+        </form>
+    </div>
+    
 
     <script>
         function showAlert() {

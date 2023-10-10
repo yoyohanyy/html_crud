@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./my.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <h1>Student Information</h1>
-    <form action="" method="">
-        <label for="name">이름:</label>
-        <input type="text" id="name" name="name" value="Yohan Yoon"><br><br>
+    <div class="col-3 col-s-3">
+        <form action="" method="">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" value="Yohan Yoon"><br><br>
 
-        <label for="studentID">학번:</label>
-        <input type="text" id="studentID" name="studentID" value="22000481"><br><br>
+            <label for="studentID">학번:</label>
+            <input type="text" id="studentID" name="studentID" value="22000481"><br><br>
 
-        <label for="gender">성별:</label>
-        <input type="text" id="gender" name="gender" value="Male"><br><br>
+            <label for="gender">성별:</label>
+            <input type="text" id="gender" name="gender" value="Male"><br><br>
 
-        <label for="email">이메일:</label>
-        <input type="text" id="email" name="email" value="asdfasdf@gmail.com"><br><br>
-    </form>
-    <a href="https://frolicking-narwhal-efb11e.netlify.app/completeform"><button>Edit</button></a><button onclick="showConfirmation()">Delete</button>
+            <label for="email">이메일:</label>
+            <input type="text" id="email" name="email" value="asdfasdf@gmail.com"><br><br>
+        </form>
+        <a href="https://frolicking-narwhal-efb11e.netlify.app/completeform"><button>Edit</button></a><button onclick="showConfirmation()">Delete</button>
+    </div>
 
     <script>
         function showConfirmation() {
