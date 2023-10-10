@@ -44,7 +44,7 @@
             <td>22000421</td>
             <td>Male</td>
             <td>asdfasdf@gmail.com</td>
-            <td><input type="button" value="수정"><input type="button" value="삭제"></td>
+            <td><a href="https://frolicking-narwhal-efb11e.netlify.app/completeform"><button>Edit</button></a><button onclick="showAlert()">Delete</button></td>
           </tr>
           <tr>
             <td>6</td>
@@ -97,8 +97,19 @@
         </tbody>
       </table>
       <br>
-      <input type="button" value="추가하기">
-</body>
+      <a href="https://frolicking-narwhal-efb11e.netlify.app/form"> <button>Add</button>
+
+        <button onclick="showConfirmation()">Show Confirmation</button>
+
+      <script>
+        function showConfirmation() {
+          var result = confirm('이 게시물을 삭제할까요?');
+          if (result) {
+          } else {
+          }
+        }
+      </script>
+ </body>
 </html>
 
 
